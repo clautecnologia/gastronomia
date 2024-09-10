@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Prueba con circulo</title>
+
+    <style>
+        .square {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(206, 172, 238);
+            position: relative;/* Esto es necesario para poder centrar el circulo*/
+            margin: 50px auto; /*Centra el cuadrado en la pagina (esto es opcional)*/
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-color: rgb(171, 97, 239);
+            border-radius: 50%; /*Hace que el div sea un circulo*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);/*esta ccion centra el circulo*/
+        }
+    </style>
+</head>
+<body>
+    <h1>No aparece</h1>
+    <div clss="square">
+        <div class="circle"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,588 @@
+                                                                                                                                        
+
+<!Materias html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="style/style_gastronomia.css">
+    <style>
+     
+
+        table{
+            
+            position: relative;
+            width: 100%;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .exp{
+            position: relative;
+            top: 30px;
+            left: 45%;
+            transform: translateX(-50%);
+            width: 40px;
+            z-index: 10;
+        }
+
+        .img-informacion{
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            width: 25px !important;
+            height: 25px !important;
+        }
+
+        td, th {
+            overflow: hidden;
+            width: 200px;
+            height: 100px;
+            border: 2px solid rgb(252, 252, 252);
+            text-align: center;
+
+            
+        }
+        
+
+        /*En este aprtado se definen las clases asi como sus estilos para los Cuadrados
+        de la tabla, colores, margen etc.*/
+
+        .letra::before{
+            content: attr(data-letter);
+            text-align: right;
+            top: 5px;
+            right: 5px;
+            font-size: 10px;
+            padding: 2px 5px;
+            border-radius: 3px;
+            position: absolute;
+            font-size: 25px;
+            color: aliceblue;
+            font-weight: bold;
+        }
+
+        .cuadrado-morado{
+
+            background-color: #ac99c9;
+            position: relative;
+            transition: transform 0.1s ease, z-index 0s 0.1s;
+           z-index: 1;
+        }
+        .cuadrado-morado:hover{
+            transform: scale(1.5);
+            z-index: 10;
+        }
+
+        .cuadrado-azul{
+            background-color: #9bbbe3;
+            position: relative;
+            transition: transform 0.1s ease, z-index 0s 0.1s;
+           z-index: 1;
+        }
+        .cuadrado-azul:hover{
+            transform: scale(1.5);
+            z-index: 10;
+        }
+        
+        .cuadrado-naranja{
+            background-color: #ecba94 ; /*Es la primer fila de lado derecho*/
+            position: relative;
+            transition: transform 0.1s ease, z-index 0s 0.1s;
+           z-index: 1;
+        }
+        .cuadrado-naranja:hover{
+            transform: scale(1.5);
+            z-index: 10;
+        }
+           
+            
+        
+        .cuadrado-amarillo{
+            position: relative;
+            background-color: #ebd28d ;
+            transition: transform 0.1s ease, z-index 0s 0.1s;
+           z-index: 1;
+        }
+        .cuadrado-amarillo:hover{
+            transform: scale(1.5);
+            z-index: 10;
+        }
+        
+        
+        .cuadrado-verde{
+            position: relative;
+            background-color: #aecf94;
+            transition: transform 0.1s ease, z-index 0s 0.1s;
+           z-index: 1;
+        }
+        .cuadrado-verde:hover{
+            transform: scale(1.5);
+            z-index: 10;
+        }
+        
+        .cuadrado-rosa{
+            background-color: #f7acba;
+            position: relative;
+            transition: transform 0.1s ease, z-index 0s 0.1s;
+           z-index: 1;
+        }
+        .cuadrado-rosa:hover{
+            transform: scale(1.5);
+            z-index: 10;
+        }
+        
+        .cuadrado-gris{
+            background-color: #ccc7c7;
+            position: relative;
+        }
+        
+
+        /*------En este apartado se encuentran las clases para los circulos----------*/
+
+        
+            /*---------Este apartado es para los botones que se agreguen-------*/
+        button{
+            border: 0;
+            background-image: linear-gradient(
+                150deg,
+                #770808,
+                rgb(166, 89, 89),
+                #f65757
+            );
+            border-radius: 8px;
+            color: #fff;
+            display: flex;
+            padding: 15px;
+            cursor: pointer;
+            transition: .3s;
+        }
+        button:hover span {
+            background: none;
+        }
+
+        button:active {
+            transform: scale(0.9);
+        }
+        
+
+    </style>
+</head>
+<body>
+    <table border="0">
+        <tr><!-- primela fila-->
+            <td class="cuadrado-morado"><div class="letra" data-letter="I"></div><div class="circle-morado" >
+                <a href="#menu-lateral">
+                    <img src="iconos/informacion.png" class="img-informacion">
+                </a>
+                <a href="PDF/1. Matematicas Aplicadas a la Gastronomía.pdf  "><img src="iconos/matematicas_aplicadas_gastro.png" alt="Icono" width="70px" height="90"></a>
+            </div> 
+                <h4>Matematicas aplicadas a la gastronomia</h4></td>
+            <td colspan="11">
+                <div class="exp">
+                    <img src="iconos/periodica.png" width="100px" height="120px">
+                </div>
+            </td>
+            <td class="cuadrado-rosa"><div class="circle-rosa">
+                <a href="PDF/Administracion del tiempo.pdf"><img src="iconos/administracion_tiempo.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="VII"></div>
+            </div> 
+                <h4>Administración del tiempo</h4></td>
+        </tr>
+
+        <tr><!--segunda fila-->
+            <td class="cuadrado-morado">
+                <div class="circle-morado" >
+                    <img src="iconos/informatica.png" alt="Icono" width="70px" height="70"></div>
+            <div class="letra" data-letter="I"></div> <!--Se agrega la letra del numero de Cuatrimestre-->
+            <h4>Informatica</h4></td>
+            <td class="cuadrado-azul">
+                <div class="letra" data-letter="I"></div>
+                <div class="circle-azul" >
+                    <a href="PDF/3. Seguridad e Higiene en Alimentos.pdf"><img src="iconos/seguridad_alimentos.png" width="70px" height="70"></a></div>
+                <h4>Seguridad e higiene en alimentos</h4></td>
+            <td class="cuadrado-azul"><div class="circle-azul" >
+                <a href="PDF/Operación de Bar.pdf"><img src="iconos/operacion_bar.png" alt="Icono" width="70px" height="90"></a>
+            </div>
+                <h4>Operación de Bar</h4>
+                <div class="letra" data-letter="III">
+                </td>
+            <td class="cuadrado-azul"><div class="circle-azul">
+                <a href="PDF/2. Fundamentos de Vitivinicultura.pdf"><img src="iconos/vinos.png" alt="Icono" width="70px" height="90"></a><div class="letra" data-letter="IV"></div>
+            </div>
+                <h4>Fundamentos de vitiviniculura</h4></td>
+            <td colspan="5">
+            </td>
+            <td class="cuadrado-naranja"><div class="circle-naranja" >
+                <a href="PDF/Inglés III.pdf"><img src="iconos/ingles.png" alt="Icono" width="70px" height="90"></a><div class="letra" data-letter="III"></div>
+            </div> 
+                <h4>Inglés III</h4></td>
+
+            <td class="cuadrado-naranja"><div class="circle-naranja" >
+                <a href="PDF/Inglés VI.pdf"><img src="iconos/ingles.png" alt="Icono" width="70px" height="90"></a><div class="letra" data-letter="VI"></div>
+            </div> 
+                <h4>Inglés VI</h4></td>
+            <td class="cuadrado-amarillo"><div class="circle-amarillo">
+                <a href="PDF/7. Formación Sociocultural II. 2018.pdf"><img src="iconos/formacion_sociocultural.png" alt="Icono" width="70px" height="90"></a><div class="letra" data-letter="II"></div>
+            </div>
+                <h4>Formación sociocultural II</h4></td>
+
+            <td class="cuadrado-rosa"><div class="circle-rosa">
+                <a href="PDF/5. Planeacion y organizacion del trabajo. 2020.pdf"><img src="iconos/planeacion_trabajo.png" alt="Icono" width="70px" height="90"></a><div class="letra" data-letter="VIII"></div>
+            </div> 
+                <h4>Planeación y organización del trabajo</h4></td>
+            
+            
+            
+        </tr>
+        <tr><!--tercera fila-->
+            <td class="cuadrado-morado">
+                <div class="circle-morado"> <img src="iconos/esadistica_aplicada_gastronomia.png" alt="Icono" width="70px" height="70"> </div>
+                <h4>Estadística aplicada a la gastronomía</h4>
+            <td class="cuadrado-azul"><div class="circle-azul">
+                <a href="PDF/4. Introducción a la gastronomía.pdf"><img src="iconos/introduccion_gastronomia.png" alt="Icono" width="70px" height="90"></a>
+            </div>
+                <h4>Introduccíon a la gastronomía</h4></td>
+            <!--<td colspan="10"></td> Este se coloca despues del
+        cuadrado o de la figura en la que se desea dejar espacio, en este caso de caca uno de los cuadrados--> 
+            <td class="cuadrado-azul"> <div class="circle-azul" >
+                <a href="PDF/Estandarización de Platillos.pdf"><img src="iconos/estandarizacion_platillos.png" alt="Icono" width="70px" height="90"></a>
+            </div><div class="letra" data-letter="III"></div>
+                <h4>Estandarización de platillos</h4></td>
+
+            <td class="cuadrado-azul"> <div class="circle-azul" >
+                <a href="PDF/3. Administracion de A y B.pdf"><img src="iconos/administracion_alimentos_bebidas.png" alt="Icono" width="70px" height="90"></a>
+            </div><div class="letra" data-letter="IV"></div>
+                <h4>Administración de alimenos y bebidas</h4></td>
+
+            <td class="cuadrado-azul"> <div class="circle-azul" >
+                <a href="PDF/3. Conformación de menús. 2018.pdf"><img src="iconos/conformacion_menus.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="V"></div>
+            </div>
+                <h4>Conformación de menús</h4></td>
+
+            <td class="cuadrado-azul"> <div class="circle-azul" >
+                <a href="PDF/Patrimonio Culinario de México.pdf"><img src="iconos/patrimonio_mexicano.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="VII"></div>
+            </div>
+                <h4>Património culinarío de méxico</h4></td>
+
+            <td class="cuadrado-azul"> <div class="circle-azul" >
+                <a href="PDF/2. Cocina Europea. 2020.pdf"><img src="iconos/europa.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="VIII"></div>
+            </div>
+                <h4>Cocina europea</h4></td>
+
+            <td class="cuadrado-azul"> <div class="circle-azul" >
+                <a href="PDF/Mixología R19.pdf"><img src="iconos/mixologia.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="IX"></div>
+            </div>
+                <h4>Mixología</h4></td>
+
+            <td class="cuadrado-azul"> <div class="circle-azul" >
+                <img src="iconos/integradora.png" alt="Icono" width="70px" height="90"><div class="letra" data-letter="X"></div>
+            </div>
+                <h4>Integradora</h4></td>
+
+            <td class="cuadrado-naranja"> <div class="circle-naranja" >
+                <a href="PDF/6. INGLES IV.pdf"><img src="iconos/ingles.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="IV"></div>
+            </div>
+                <h4>Inglés IV</h4></td>
+
+            <td class="cuadrado-naranja"> <div class="circle-naranja" >
+                <a href="PDF/4. Inglés VII. 2020.pdf"><img src="iconos/ingles.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="VIII"></div>
+            </div>
+                <h4>Inglés VII</h4></td>
+
+            <td class="cuadrado-amarillo"> <div class="circle-amarillo" >
+                <a href="PDF/Formación Sociocultural III.pdf"><img src="iconos/formacion_sociocultural.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="III"></div>
+            </div>
+                <h4>Formación sociocultural III</h4></td>
+
+            <td class="cuadrado-rosa"><div class="circle-rosa">
+                <a href="PDF/Direccion de equipos de alto rendimiento.pdf"><img src="iconos/rendimiento.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="IX"></div>
+            </div>
+                <h4>Dirección de equipos de alto rendimiento</h4></td>
+        </tr>
+        <tr><!--cuarta fila-->
+            <td class="cuadrado-morado"> <div class="circle-morado" >
+                <a href="PDF/2. Fundamentos de nutrición. 2018.pdf"><img src="iconos/fundamentos_nutricion.png" alt="Icono" width="70px" height="90"></a>
+            </div>
+                <h4>Fundamentos de nutrición</h4>
+
+            <td class="cuadrado-azul"><div class="circle-azul">
+                <a href="PDF/5. Bases culinarias.pdf"><img src="iconos/bases_culinarias.png" alt="Icono" width="70px" height="90"></a>
+                
+            </div>
+                <h4>Bases culinarias</h4></td>
+
+            <td class="cuadrado-azul"><div class="circle-azul">
+                
+                <a href="PDF/Gestión de compras y almacén.pdf"><img src="iconos/gestion_almacen.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="III"></div>
+            </div>
+                <h4>Gestión de compras y almacén</h4></td>
+
+            <td class="cuadrado-azul"><div class="circle-azul">
+                
+                <a href="PDF/4. Repostería.pdf"><img src="iconos/reposeria.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="IV"></div>
+            </div>
+                <h4>Reposería</h4></td>
+
+            <td class="cuadrado-azul"><div class="circle-azul">
+                
+                <a href="PDF/4. Logística de eventos. 2018.pdf"><img src="iconos/logisica_eventoas.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="V"></div>
+            </div>
+                <h4>Logísica de eventos</h4></td>
+
+            <td class="cuadrado-azul"><div class="circle-azul">
+                
+                <a href="PDF/Administración de Procesos Gastronómicos R18.pdf"><img src="iconos/procesos_gastronomicos.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="VII"></div>
+            </div>
+                <h4>Adminnistración de procesos gastronomicos</h4></td>
+
+            <td class="cuadrado-azul"><div class="circle-azul">
+                
+                <a href="PDF/3. Ingeniería de Menú. 2020.pdf"><img src="iconos/ingenieria_menus.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="VIII"></div>
+            </div>
+                <h4>Ingenieía de menús</h4></td>
+
+            <td class="cuadrado-azul"><div class="circle-azul">
+                
+                <a href="PDF/cocina contemporanea R19_.pdf"><img src="iconos/contemporanea.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="X"></div>
+            </div>
+                <h4>Cocina contemporánea</h4></td>
+
+            <td class="cuadrado-naranja"><div class="circle-naranja">
+                
+                <a href="PDF/6. INGLES I.pdf"><img src="iconos/ingles.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="I"></div>
+            </div>
+                <h4>Ingles I</h4></td>
+
+            <td class="cuadrado-naranja"> <div class="circle-naranja">
+                
+                <a href="PDF/7. FRANCES I.pdf"><img src="iconos/frances.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="IV"></div>
+            </div>
+                <h4>Francés I</h4></td>
+
+                <td class="cuadrado-naranja"> <div class="circle-naranja">
+                    
+                    <a href="PDF/Inglés VIII.pdf"><img src="iconos/ingles.png" alt="Icono" width="70px" height="90"></a>
+                    <div class="letra" data-letter="XI"></div>
+                </div>
+                    <h4>Inglés VIII</h4></td>
+
+            <td class="cuadrado-amarillo"> <div class="circle-amarillo">
+                
+                <a href="PDF/8. FORMACION SOCIOCULTURAL IV.pdf"><img src="iconos/formacion_sociocultural.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="VI"></div>
+            </div>
+                <h4>Formación socioculural IV</h4></td>
+
+            <td class="cuadrado-rosa"> <div class="circle-rosa">
+                
+                <a href="PDF/Negociación Empresarial..pdf"><img src="iconos/empresarial.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="X"></div>
+            </div>
+                <h4>Negociación empresarial</h4></td>
+        </tr>
+        <tr><!--quinta fila-->
+            <td class="cuadrado-morado"> <div class="circle-morado" >
+                <a href="PDF/Costos y presupuestos.pdf"><img src="iconos/costos_presupuestos.png" alt="Icono" width="70px" height="90"><a href="P"></a></a>
+            </div>
+                <h4>Costos y Presupuestos</h4></td>
+
+            <td class="cuadrado-azul"><div class="circle-azul">
+                <a href="PDF/3. Servicios de alimentos y bebidas. 2018.pdf"><img src="iconos/alimentos_bebidas.png" alt="Icono" width="70px" height="90"></a>
+                
+            </div>
+                <h4>Servicios de alimentos y bebidas</h4></td>
+            <td class="cuadrado-azul"><div class="circle-azul">
+                <a href="PDF/Pastelería.pdf"> <img src="iconos/pasteleria.png" alt="Icono" width="70px" height="90"><div class="letra" data-letter="III"></div></a>
+               
+            </div>
+                <h4>Pastelería</h4></td>
+            <td class="cuadrado-azul"><div class="circle-azul">
+                
+                <a href="PDF/5. Integradora I.pdf"><img src="iconos/integradora.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="IV"></div>
+            </div>
+                <h4>Integradora I</h4></td>
+            <td class="cuadrado-azul"><div class="circle-azul">
+               
+                <a href="PDF/5. Integradora II. 2018.pdf"> <img src="iconos/integradora.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="V"></div>
+            </div>
+                <h4>Integradora II</h4></td>
+            <td class="cuadrado-azul"><div class="circle-azul">
+                
+                <a href="PDF/Bebidas destiladas Mexicanas.pdf"><img src="iconos/bebidas_destiladas.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="VII"></div>
+            </div>
+                <h4>Bebidas destiladas mexicanas</h4></td>
+            <td class="cuadrado-azul"><div class="circle-azul">
+                
+                <a href="PDF/Cocina Asiática R19.pdf"><img src="iconos/comida-asiatica.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="IX"></div>
+            </div>
+                <h4>Cocina asiática</h4></td>
+            <td class="cuadrado-azul"><div class="circle-azul">
+                
+                <a href="PDF/GESTION DE LA CALIDAD EN ESTABLECIMIENTOS DE ALIMENTOS Y BEBIDAS r19.pdf"><img src="iconos/calidad_establecimiento.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="X"></div>
+            </div>
+                <h4>Gestión de la calidad en establecimientos de alimentos y bebidas</h4></td>
+            <td class="cuadrado-naranja"><div class="circle-naranja">
+               
+                <a href="PDF/7. Expresión Oral y Escrita I.pdf"> <img src="iconos/expresion.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="I"></div>
+            </div>
+                <h4>Expresión oral y escrita I</h4></td>
+            <td class="cuadrado-naranja"><div class="circle-naranja">
+                
+                <a href="PDF/6. Inglés V. 2018.pdf"><img src="iconos/ingles.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="V"></div>
+            </div>
+                <h4>Inglés V</h4></td>
+            <td class="cuadrado-naranja"> <div class="circle-naranja">
+                
+                <a href="PDF/Inglés VIII.pdf"><img src="iconos/ingles.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="X"></div>
+            </div>
+                <h4>Inglés IX</h4></td>
+            <td class="cuadrado-verde"> <div class="circle-verde">
+                
+                <a href="PDF/Contabilidad R19.pdf"><img src="iconos/conabilidad.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="IX"></div></div>
+                <h4>Contabilidad</h4></td>
+            <td class="cuadrado-gris"><div class="circle-gris"></div>
+                <h4></h4></td>
+      
+            
+            
+        </tr>
+        <tr><!--sexta fila-->
+            <td class="cuadrado-morado"> <div class="circle-morado">
+                <a href="PDF/1. Metodos y Tecnicas de Investigación Enfocadas a la Gastronomía. 2018.pdf"><img src="iconos/tecnicas_investigacion.png" alt="Icono" width="70px" height="90"></a>
+                  
+            </div>
+                <h4>Métodos y técnicas de investigaciíon aplica a la gastronomía</h4></td>
+
+            <td class="cuadrado-azul"><div class="circle-azul">
+                <a href="PDF/4. Métodos y técnicas culinarias. 2018.pdf"><img src="iconos/tecnicas_culinarias.png" alt="Icono" width="70px" height="90"></a>
+                
+            </div>
+                <h4>Métodos y técnicas culinarias</h4></td>
+
+            <td class="cuadrado-azul"> <div class="circle-azul" >
+                <a href="PDF/1. Mercadotecnia de servicios gastronómicos.pdf"><img src="iconos/mercadotecnia.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="IV"></div>
+            </div>
+                <h4>Mercadotecnía de servicios gastronómicos</h4></td>
+
+            <td class="cuadrado-azul"><div class="circle-azul">
+                <a href="PDF/2. Evaluación de servicios gastronómicos. 2018.pdf"><img src="iconos/servicios_gastronomicos.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="V"></div>
+            </div>
+                <h4>Evaluación de servicios gastronómicos</h4></td>
+
+            <td class="cuadrado-azul"><div class="circle-azul">
+                <a href="PDF/COCINA MEXICANA I.pdf"><img src="iconos/comida_mexicana.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="VII"></div>
+            </div>
+                <h4>Cocina mexicana I</h4></td>
+
+            <td class="cuadrado-azul"><div class="circle-azul">
+                <a href="PDF/1. Cocina Mexicana II. 2020.pdf"><img src="iconos/comida_mexicana.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="VIII"></div>
+            </div>
+                <h4>Cocina<br>mexicana II</h4></td>
+
+            <td class="cuadrado-azul"><div class="circle-azul">
+                <a href="PDF/Conceptos Gastronómicos R19.pdf"> <img src="iconos/conceptos_gastronomicos.png" alt="Icono" width="70px" height="90"></a>
+               
+                <div class="letra" data-letter="IX"></div>
+            </div>
+                <h4>Conceptos gastronómicos</h4></td>
+                
+            <td class="cuadrado-azul"><div class="circle-azul">
+                <a href="PDF/Desarrollo de Negocios Gastronomicos R19.pdf"><img src="iconos/negocios_gastronomia.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="X"></div>
+            </div>
+
+                <h4>Desarrollo de negocios gastrónomicos</h4></td>
+
+            <td class="cuadrado-naranja"><div class="circle-naranja">
+                <a href="PDF/Inglés III.pdf"><img src="iconos/ingles.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="II"></div>
+            </div>
+                <h4>Inglés II</h4></td>
+
+            <td class="cuadrado-naranja"><div class="circle-naranja">
+                <a href="PDF/7. Francés II. 2018.pdf"><img src="iconos/frances.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="V"></div>
+            </div>
+                <h4>Francés II</h4></td>
+
+            <td class="cuadrado-amarillo"> <div class="circle-amarillo">
+                <a href="PDF/8. FORMACION SOCIOCULTURAL I.pdf"><img src="iconos/formacion_sociocultural.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="I"></div>
+            </div>
+                <h4>Formación sociocultural I</h4></td>
+
+            <td class="cuadrado-verde"> <div class="circle-verde">
+                <a href="PDF/ANALISIS E INTERPRETACION FINANCIERA R19.pdf"><img src="iconos/financiera.png" alt="Icono" width="70px" height="90"></a>
+                <div class="letra" data-letter="X"></div>
+            </div>
+                <h4>Análisis e interpretación financiera</h4></td>
+            <td class="cuadrado-gris"> <div class="circle-gris"></div>
+                <h4></h4></td>
+
+          
+            
+        </tr>
+        
+        </tr>
+    </table> 
+
+<div class="preguntas-respuestas">
+    <div id="menu-contenido" class="menu-contenido">
+        <div  id="menu-lateral" class="menu-lateral">
+    <a href="#contenido1" id="que-es" class="opcion opcion1">Que es?</a>
+    <a href="#contenido2" id="Estructura" class="opcion opcion2">Estructura</a>
+    <a href="#contenido3" id="utilidad?" class="opcion opcion3">Cual es su utilidad?</a>
+    <a href="#contenido4" id="desempeño_academico" class="opcion opcion4">Desempeño Academico</a>
+    
+   </div>
+<!--A partir de aqui se encuentra el conenido de la tabla de informacion-->
+   <div class="contenido ">
+      <div id="contenido1" class="contenido-item " >
+         <p>¿Qué son las Instituciones del Estado? Las instituciones del Estado son entidades gubernamentales encargadas de llevar a cabo diversas funciones, como la legislación, la ejecución de leyes, la regulación, la prestación de servicios públicos y la administración de recursos públicos.</p>
+      </div>
+      <div id="contenido2" class="contenido-item">
+        <p>Pruebita</p>
+   </div>
+   <div id="contenido3" class="contenido-item">
+      <p>¿Qué son las Instituciones del Estado? Las instituciones del Estado son entidades gubernamentales encargadas de llevar a cabo diversas funciones, como la legislación, la ejecución de leyes, la regulación, la prestación de servicios públicos y la administración de recursos públicos.</p>
+   </div>
+   <div id="contenido4" class="contenido-item">
+      <p>¿Qué son las Instituciones del Estado? Las instituciones del Estado son entidades gubernamentales encargadas de llevar a cabo diversas funciones, como la legislación, la ejecución de leyes, la regulación, la prestación de servicios públicos y la administración de recursos públicos.</p>
+   </div>
+</div> 
+</div>
+</div>
+   
+   
+
+</body>
+</html>
